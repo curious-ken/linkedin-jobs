@@ -1,0 +1,34 @@
+# Example candidate profile for linkedin-jobs.
+# Copy this file and tailor the lists to yourself:
+#
+#   linkedin-jobs -k "backend engineer" --profile profile.toml --region emea
+
+# Terms worth points when found in the listing text (title matches score higher).
+skills = [
+    "rust",
+    "python",
+    "go",
+    "linux",
+    "postgres",
+    "docker",
+    "kubernetes",
+    "backend",
+    "distributed",
+    "api",
+]
+
+# Strong title fragments worth extra weight.
+titles = [
+    "rust engineer",
+    "backend engineer",
+    "software engineer",
+    "systems engineer",
+    "platform engineer",
+]
+
+# Any listing containing one of these is dropped entirely.
+exclude = [
+    "unpaid",
+    "internship",
+    "stage",
+]

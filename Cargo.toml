@@ -1,0 +1,24 @@
+[package]
+name = "linkedin-jobs"
+version = "0.1.0"
+edition = "2021"
+description = "Scrape LinkedIn public job listings for a profile across Tunisia, France and Europe"
+
+[[bin]]
+name = "linkedin-jobs"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+csv = "1"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls", "gzip"] }
+scraper = "0.20"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
